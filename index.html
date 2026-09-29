@@ -6,124 +6,28 @@
 <title>Ella Black | Engineering Portfolio</title>
 <meta name="description" content="Ella Black — Systems Engineering & Design student at UIUC. CAD, process optimization, prototyping, systems thinking, and technical communication.">
 <style>
-:root{
-  --bg:#0b0f14; --panel:#121923; --panel2:#0f151e; --text:#f4f7fb;
-  --muted:#a9b6c7; --line:#263244; --accent:#79a9ff; --accent2:#9ae6d6;
-  --max:1040px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-  "Segoe UI", sans-serif; background:linear-gradient(180deg,#0a0e13 0%,#0b1017 100%);
-  color:var(--text); line-height:1.55;
-}
-a{color:inherit}
-.wrap{max-width:var(--max); margin:auto; padding:0 24px}
-nav{
-  position:sticky; top:0; z-index:10; backdrop-filter:blur(14px);
-  background:rgba(10,14,19,.78); border-bottom:1px solid rgba(255,255,255,.07);
-}
-.nav-inner{height:64px; display:flex; align-items:center; justify-content:space-between}
-.brand{font-weight:750; letter-spacing:.02em}
-.nav-links{display:flex; gap:22px; font-size:14px; color:var(--muted)}
-.nav-links a{text-decoration:none}
-.nav-links a:hover{color:var(--text)}
-.hero{padding:88px 0 72px}
-.eyebrow{color:var(--accent2); font-size:13px; font-weight:700; letter-spacing:.14em; text-transform:uppercase}
-h1{font-size:clamp(44px,8vw,78px); line-height:.98; margin:14px 0 22px; letter-spacing:-.045em}
-.lead{max-width:760px; font-size:20px; color:#c9d3df}
-.hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:30px}
-.btn{display:inline-block; padding:11px 16px; border-radius:9px; text-decoration:none; font-weight:700; font-size:14px}
-.btn-primary{background:var(--text); color:#0b0f14}
-.btn-secondary{border:1px solid var(--line); color:var(--text); background:#111821}
-.metrics{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:54px}
-.metric{padding:18px; border:1px solid var(--line); background:rgba(18,25,35,.72); border-radius:12px}
-.metric b{display:block; font-size:26px; letter-spacing:-.03em}
-.metric span{color:var(--muted); font-size:13px}
-section{padding:68px 0}
-.section-label{font-size:13px; text-transform:uppercase; letter-spacing:.15em; color:var(--accent)}
-h2{font-size:36px; margin:8px 0 28px; letter-spacing:-.03em}
-.grid{display:grid; grid-template-columns:repeat(12,1fr); gap:18px}
-.card{border:1px solid var(--line); background:linear-gradient(180deg,var(--panel),var(--panel2)); border-radius:14px; padding:26px}
-.project{grid-column:span 12}
-.project-head{display:flex; gap:24px; justify-content:space-between; align-items:flex-start}
-.project h3{margin:0; font-size:25px; letter-spacing:-.02em}
-.tagrow{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 18px}
-.tag{border:1px solid #334257; color:#c7d3e1; font-size:12px; border-radius:999px; padding:5px 9px}
-.project p{color:#c8d2df; max-width:820px}
-.project-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0 8px}
-.shot{margin:0;border:1px solid var(--line);background:#0d131b;border-radius:12px;overflow:hidden}
-.shot.feature{grid-column:span 2}
-.shot img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:#999}
-.shot:not(.feature) img{aspect-ratio:3/2;object-fit:contain}
-.shot figcaption{padding:10px 12px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
-.bullets{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:22px}
-.mini{border-top:1px solid var(--line); padding-top:16px}
-.mini strong{display:block; margin-bottom:5px}
-.mini span{color:var(--muted); font-size:14px}
-.two{grid-column:span 6}
-.two h3{margin-top:0}
-.two p{color:#c4cfdb}
-.skills{display:flex; flex-wrap:wrap; gap:9px}
-.skill{background:#131d29; border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:13px}
-.timeline{display:grid; gap:10px}
-.row{display:flex; justify-content:space-between; gap:20px; padding:12px 0; border-bottom:1px solid var(--line)}
-.row:last-child{border-bottom:0}
-.row span{color:var(--muted)}
-.callout{padding:34px; border:1px solid #355073; border-radius:16px; background:linear-gradient(135deg,#111b29,#0f151d)}
-.callout p{color:#c8d3df; max-width:800px}
-footer{padding:34px 0 54px; color:var(--muted); border-top:1px solid var(--line); font-size:13px}
-@media(max-width:760px){
-  .nav-links{display:none}
-  .metrics{grid-template-columns:repeat(2,1fr)}
-  .two{grid-column:span 12}
-  .bullets{grid-template-columns:1fr}
-  .project-gallery{grid-template-columns:1fr}
-  .shot.feature{grid-column:span 1}
-  .project-head{display:block}
-}
+:root{--bg:#0b0f14;--panel:#121923;--panel2:#0f151e;--text:#f4f7fb;--muted:#a9b6c7;--line:#263244;--accent:#79a9ff;--accent2:#9ae6d6;--max:1040px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(180deg,#0a0e13 0%,#0b1017 100%);color:var(--text);line-height:1.55}a{color:inherit}.wrap{max-width:var(--max);margin:auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:10;backdrop-filter:blur(14px);background:rgba(10,14,19,.78);border-bottom:1px solid rgba(255,255,255,.07)}.nav-inner{height:64px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:750;letter-spacing:.02em}.nav-links{display:flex;gap:22px;font-size:14px;color:var(--muted)}.nav-links a{text-decoration:none}.nav-links a:hover{color:var(--text)}
+.hero{padding:88px 0 72px}.eyebrow{color:var(--accent2);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}h1{font-size:clamp(44px,8vw,78px);line-height:.98;margin:14px 0 22px;letter-spacing:-.045em}.lead{max-width:760px;font-size:20px;color:#c9d3df}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-block;padding:11px 16px;border-radius:9px;text-decoration:none;font-weight:700;font-size:14px}.btn-primary{background:var(--text);color:#0b0f14}.btn-secondary{border:1px solid var(--line);color:var(--text);background:#111821}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:54px}.metric{padding:18px;border:1px solid var(--line);background:rgba(18,25,35,.72);border-radius:12px}.metric b{display:block;font-size:26px;letter-spacing:-.03em}.metric span{color:var(--muted);font-size:13px}
+section{padding:68px 0}.section-label{font-size:13px;text-transform:uppercase;letter-spacing:.15em;color:var(--accent)}h2{font-size:36px;margin:8px 0 28px;letter-spacing:-.03em}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.card{border:1px solid var(--line);background:linear-gradient(180deg,var(--panel),var(--panel2));border-radius:14px;padding:26px}.project{grid-column:span 12}.project-head{display:flex;gap:24px;justify-content:space-between;align-items:flex-start}.project h3{margin:0;font-size:25px;letter-spacing:-.02em}.tagrow{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}.tag{border:1px solid #334257;color:#c7d3e1;font-size:12px;border-radius:999px;padding:5px 9px}.project p{color:#c8d2df;max-width:820px}
+.project-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0 8px}.shot{margin:0;border:1px solid var(--line);background:#0d131b;border-radius:12px;overflow:hidden}.shot img{display:block;width:100%;aspect-ratio:500/386;height:auto;object-fit:contain;background:#a8a8a8}.shot figcaption{padding:10px 12px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);min-height:58px}
+.bullets{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}.mini{border-top:1px solid var(--line);padding-top:16px}.mini strong{display:block;margin-bottom:5px}.mini span{color:var(--muted);font-size:14px}.two{grid-column:span 6}.two h3{margin-top:0}.two p{color:#c4cfdb}.skills{display:flex;flex-wrap:wrap;gap:9px}.skill{background:#131d29;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:13px}.timeline{display:grid;gap:10px}.row{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--line)}.row:last-child{border-bottom:0}.row span{color:var(--muted)}.callout{padding:34px;border:1px solid #355073;border-radius:16px;background:linear-gradient(135deg,#111b29,#0f151d)}.callout p{color:#c8d3df;max-width:800px}footer{padding:34px 0 54px;color:var(--muted);border-top:1px solid var(--line);font-size:13px}
+@media(max-width:760px){.nav-links{display:none}.metrics{grid-template-columns:repeat(2,1fr)}.two{grid-column:span 12}.bullets{grid-template-columns:1fr}.project-gallery{grid-template-columns:1fr}.shot{max-width:520px;margin:0 auto;width:100%}.project-head{display:block}}
 </style>
 </head>
 <body>
-<nav>
-  <div class="wrap nav-inner">
-    <div class="brand">ELLA BLACK</div>
-    <div class="nav-links">
-      <a href="#work">Work</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a>
-    </div>
-  </div>
-</nav>
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">Systems Engineering & Design · UIUC</div>
-    <h1>I like figuring out how complex things work — and how to make them work better.</h1>
-    <p class="lead">I’m a sophomore at the University of Illinois Urbana-Champaign studying Systems Engineering & Design. My work sits across CAD, prototyping, process optimization, systems integration, and technical communication. I’m especially interested in fast-scaling technologies including autonomy, AI, space, advanced energy, and quantum.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#work">View selected work</a>
-      <a class="btn btn-secondary" href="./resume.html" target="_blank">Resume</a>
-      <a class="btn btn-secondary" href="mailto:emblack2@illinois.edu">emblack2@illinois.edu</a>
-    </div>
-    <div class="metrics">
-      <div class="metric"><b>3.9</b><span>UIUC GPA</span></div>
-      <div class="metric"><b>100+</b><span>team-hours on reverse-engineering project</span></div>
-      <div class="metric"><b>34</b><span>parts in reconstructed CAD assembly</span></div>
-      <div class="metric"><b>$8K+</b><span>revenue from independent client business</span></div>
-    </div>
-  </div>
-</header>
+<nav><div class="wrap nav-inner"><div class="brand">ELLA BLACK</div><div class="nav-links"><a href="#work">Work</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a></div></div></nav>
+<header class="hero"><div class="wrap"><div class="eyebrow">Systems Engineering & Design · UIUC</div><h1>I like figuring out how complex things work — and how to make them work better.</h1><p class="lead">I’m a sophomore at the University of Illinois Urbana-Champaign studying Systems Engineering & Design. My work sits across CAD, prototyping, process optimization, systems integration, and technical communication. I’m especially interested in fast-scaling technologies including autonomy, AI, space, advanced energy, and quantum.</p><div class="hero-actions"><a class="btn btn-primary" href="#work">View selected work</a><a class="btn btn-secondary" href="./resume.html" target="_blank">Resume</a><a class="btn btn-secondary" href="mailto:emblack2@illinois.edu">emblack2@illinois.edu</a></div><div class="metrics"><div class="metric"><b>3.9</b><span>UIUC GPA</span></div><div class="metric"><b>100+</b><span>team-hours on reverse-engineering project</span></div><div class="metric"><b>34</b><span>parts in reconstructed CAD assembly</span></div><div class="metric"><b>$8K+</b><span>revenue from independent client business</span></div></div></div></header>
 <main>
 <section id="work"><div class="wrap"><div class="section-label">Selected work</div><h2>Engineering, operations, and communication</h2><div class="grid">
-<article class="card project">
-<div class="project-head"><div><h3>AT-TE Walker Reverse Engineering</h3><div class="tagrow"><span class="tag">Autodesk Fusion 360</span><span class="tag">Reverse Engineering</span><span class="tag">Assembly Integration</span><span class="tag">3D Printing</span><span class="tag">Team of 5</span></div></div><div style="color:var(--muted);white-space:nowrap">SE 101 · Spring 2026</div></div>
-<p>Reverse-engineered a 9-inch articulated walker with a five-person team, rebuilding the physical object as a 34-part CAD assembly with 21 unique modeled components. I owned 24% of the assembly modeling and coordinated linked-file interfaces across contributors as the design moved toward a physical prototype.</p>
+<article class="card project"><div class="project-head"><div><h3>AT-TE Walker Reverse Engineering</h3><div class="tagrow"><span class="tag">Autodesk Fusion 360</span><span class="tag">Reverse Engineering</span><span class="tag">Assembly Integration</span><span class="tag">3D Printing</span><span class="tag">Team of 5</span></div></div><div style="color:var(--muted);white-space:nowrap">SE 101 · Spring 2026</div></div><p>Reverse-engineered a 9-inch articulated walker with a five-person team, rebuilding the physical object as a 34-part CAD assembly with 21 unique modeled components. I owned 24% of the assembly modeling and coordinated linked-file interfaces across contributors as the design moved toward a physical prototype.</p>
 <div class="project-gallery">
-<figure class="shot feature"><img src="./assets/atte-final.jpg" alt="Final CAD reconstruction of the AT-TE reverse-engineering project" loading="lazy"><figcaption>Final team CAD reconstruction — full-system view.</figcaption></figure>
-<figure class="shot"><img src="./assets/atte-source.jpg" alt="Low-angle CAD render of the AT-TE assembly" loading="lazy"><figcaption>Low-angle CAD render showing the underside, leg articulation, and assembly geometry.</figcaption></figure>
-<figure class="shot"><img src="./assets/atte-detail.jpg" alt="Rear three-quarter CAD render of the AT-TE assembly" loading="lazy"><figcaption>Rear three-quarter CAD render showing body geometry, leg interfaces, and articulated joints.</figcaption></figure>
+<figure class="shot"><img id="atte-side" alt="Side three-quarter CAD render of the AT-TE reverse-engineering project"><figcaption>Final team CAD reconstruction — side three-quarter view.</figcaption></figure>
+<figure class="shot"><img id="atte-low" alt="Low-angle CAD render of the AT-TE assembly"><figcaption>Low-angle view showing underside geometry and leg articulation.</figcaption></figure>
+<figure class="shot"><img id="atte-rear" alt="Rear three-quarter CAD render of the AT-TE assembly"><figcaption>Rear three-quarter view showing body geometry and articulated joints.</figcaption></figure>
 </div>
-<div class="bullets"><div class="mini"><strong>Problem solving under ambiguity</strong><span>Resolved inaccessible geometry using measurements and visual inference rather than complete source dimensions.</span></div><div class="mini"><strong>Design for fit & motion</strong><span>Modeled body, legs, feet, and connector geometry with mating/alignment features and rotational joints.</span></div><div class="mini"><strong>Systems integration</strong><span>Managed revisions and interfaces across five contributors and helped carry the final system into documentation, animation, and a 3D-printed prototype.</span></div></div>
-</article>
+<div class="bullets"><div class="mini"><strong>Problem solving under ambiguity</strong><span>Resolved inaccessible geometry using measurements and visual inference rather than complete source dimensions.</span></div><div class="mini"><strong>Design for fit & motion</strong><span>Modeled body, legs, feet, and connector geometry with mating/alignment features and rotational joints.</span></div><div class="mini"><strong>Systems integration</strong><span>Managed revisions and interfaces across five contributors and helped carry the final system into documentation, animation, and a 3D-printed prototype.</span></div></div></article>
 <article class="card two"><h3>Independent Pet Care Business</h3><div class="tagrow"><span class="tag">Operations</span><span class="tag">Client Management</span><span class="tag">Financial Tracking</span></div><p>Built and operate an independent service business with 20+ repeat clients and $8K+ in revenue. I own scheduling, customer requirements, service delivery, client communication, and financial tracking. The experience has made me comfortable managing overlapping priorities and being accountable for the outcome.</p></article>
 <article class="card two"><h3>Fundraising Pitch Deck · NDA</h3><div class="tagrow"><span class="tag">Technical Communication</span><span class="tag">Investor Messaging</span><span class="tag">PowerPoint</span></div><p>Translated complex technical and company information into a concise investor-facing narrative for a private company pursuing a multi-million-dollar fundraising goal. Created and refined slides, visuals, and messaging used in investor meetings while maintaining confidentiality.</p></article>
 </div></div></section>
@@ -132,5 +36,16 @@ footer{padding:34px 0 54px; color:var(--muted); border-top:1px solid var(--line)
 <section id="contact"><div class="wrap"><div class="callout"><div class="section-label">Contact</div><h2 style="margin-bottom:12px">Interested in hard technical problems and fast-learning environments.</h2><p>I’m looking for opportunities where I can contribute to real engineering work, learn from strong technical teams, and better understand how complex technologies move from design to implementation and scale.</p><div class="hero-actions"><a class="btn btn-primary" href="mailto:emblack2@illinois.edu">Email me</a><a class="btn btn-secondary" href="./resume.html" target="_blank">View resume</a></div></div></div></section>
 </main>
 <footer><div class="wrap">Ella Black · Systems Engineering & Design · University of Illinois Urbana-Champaign</div></footer>
+<script>
+async function loadB64Image(id, files){
+  try{
+    const parts=await Promise.all(files.map(async f=>{const r=await fetch(f);if(!r.ok)throw new Error(f);return (await r.text()).trim()}));
+    document.getElementById(id).src='data:image/jpeg;base64,'+parts.join('');
+  }catch(e){console.error('Image load failed',id,e)}
+}
+loadB64Image('atte-side',['./assets/b64/side-1.txt','./assets/b64/side-2.txt','./assets/b64/side-3.txt']);
+loadB64Image('atte-low',['./assets/b64/low-1.txt','./assets/b64/low-2.txt','./assets/b64/low-3.txt']);
+loadB64Image('atte-rear',['./assets/b64/rear-1.txt','./assets/b64/rear-2.txt','./assets/b64/rear-3.txt']);
+</script>
 </body>
 </html>
