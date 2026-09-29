@@ -52,14 +52,12 @@ h2{font-size:36px; margin:8px 0 28px; letter-spacing:-.03em}
 .tagrow{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 18px}
 .tag{border:1px solid #334257; color:#c7d3e1; font-size:12px; border-radius:999px; padding:5px 9px}
 .project p{color:#c8d2df; max-width:820px}
-
 .project-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0 8px}
 .shot{margin:0;border:1px solid var(--line);background:#0d131b;border-radius:12px;overflow:hidden}
 .shot.feature{grid-column:span 2}
-.shot img{display:block;width:100%;height:100%;max-height:520px;object-fit:cover;background:#999}
-.shot:not(.feature) img{aspect-ratio:3/2;object-fit:cover}
+.shot img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:#999}
+.shot:not(.feature) img{aspect-ratio:3/2;object-fit:contain}
 .shot figcaption{padding:10px 12px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
-
 .bullets{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:22px}
 .mini{border-top:1px solid var(--line); padding-top:16px}
 .mini strong{display:block; margin-bottom:5px}
@@ -96,16 +94,11 @@ footer{padding:34px 0 54px; color:var(--muted); border-top:1px solid var(--line)
     </div>
   </div>
 </nav>
-
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">Systems Engineering & Design · UIUC</div>
     <h1>I like figuring out how complex things work — and how to make them work better.</h1>
-    <p class="lead">
-      I’m a sophomore at the University of Illinois Urbana-Champaign studying Systems Engineering & Design.
-      My work sits across CAD, prototyping, process optimization, systems integration, and technical communication.
-      I’m especially interested in fast-scaling technologies including autonomy, AI, space, advanced energy, and quantum.
-    </p>
+    <p class="lead">I’m a sophomore at the University of Illinois Urbana-Champaign studying Systems Engineering & Design. My work sits across CAD, prototyping, process optimization, systems integration, and technical communication. I’m especially interested in fast-scaling technologies including autonomy, AI, space, advanced energy, and quantum.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="#work">View selected work</a>
       <a class="btn btn-secondary" href="./resume.html" target="_blank">Resume</a>
@@ -119,152 +112,25 @@ footer{padding:34px 0 54px; color:var(--muted); border-top:1px solid var(--line)
     </div>
   </div>
 </header>
-
 <main>
-<section id="work">
-  <div class="wrap">
-    <div class="section-label">Selected work</div>
-    <h2>Engineering, operations, and communication</h2>
-
-    <div class="grid">
-      <article class="card project">
-        <div class="project-head">
-          <div>
-            <h3>AT-TE Walker Reverse Engineering</h3>
-            <div class="tagrow">
-              <span class="tag">Autodesk Fusion 360</span>
-              <span class="tag">Reverse Engineering</span>
-              <span class="tag">Assembly Integration</span>
-              <span class="tag">3D Printing</span>
-              <span class="tag">Team of 5</span>
-            </div>
-          </div>
-          <div style="color:var(--muted);white-space:nowrap">SE 101 · Spring 2026</div>
-        </div>
-        <p>
-          Reverse-engineered a 9-inch articulated walker with a five-person team, rebuilding the physical object
-          as a 34-part CAD assembly with 21 unique modeled components. I owned 24% of the assembly modeling and
-          coordinated linked-file interfaces across contributors as the design moved toward a physical prototype.
-        </p>
-        <div class="project-gallery">
-          <figure class="shot feature">
-            <img src="./assets/atte-final.jpg" alt="Final CAD reconstruction of the AT-TE reverse-engineering project" loading="lazy">
-            <figcaption>Final team CAD reconstruction - full-system view.</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="./assets/atte-source.jpg" alt="Physical AT-TE source object used for reverse engineering" loading="lazy">
-            <figcaption>Source object used for measurement and reverse engineering.</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="./assets/atte-detail.jpg" alt="Detailed CAD view of the AT-TE assembly" loading="lazy">
-            <figcaption>Assembly detail view showing geometry, fit, and component interfaces.</figcaption>
-          </figure>
-        </div>
-        <div class="bullets">
-          <div class="mini"><strong>Problem solving under ambiguity</strong><span>Resolved inaccessible geometry using measurements and visual inference rather than complete source dimensions.</span></div>
-          <div class="mini"><strong>Design for fit & motion</strong><span>Modeled body, legs, feet, and connector geometry with mating/alignment features and rotational joints.</span></div>
-          <div class="mini"><strong>Systems integration</strong><span>Managed revisions and interfaces across five contributors and helped carry the final system into documentation, animation, and a 3D-printed prototype.</span></div>
-        </div>
-      </article>
-
-      <article class="card two">
-        <h3>Independent Pet Care Business</h3>
-        <div class="tagrow"><span class="tag">Operations</span><span class="tag">Client Management</span><span class="tag">Financial Tracking</span></div>
-        <p>
-          Built and operate an independent service business with 20+ repeat clients and $8K+ in revenue.
-          I own scheduling, customer requirements, service delivery, client communication, and financial tracking.
-          The experience has made me comfortable managing overlapping priorities and being accountable for the outcome.
-        </p>
-      </article>
-
-      <article class="card two">
-        <h3>Fundraising Pitch Deck · NDA</h3>
-        <div class="tagrow"><span class="tag">Technical Communication</span><span class="tag">Investor Messaging</span><span class="tag">PowerPoint</span></div>
-        <p>
-          Translated complex technical and company information into a concise investor-facing narrative for a
-          private company pursuing a multi-million-dollar fundraising goal. Created and refined slides, visuals,
-          and messaging used in investor meetings while maintaining confidentiality.
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="wrap">
-    <div class="section-label">Toolbox</div>
-    <h2>Technical skills & methods</h2>
-    <div class="grid">
-      <div class="card two">
-        <h3>Design & prototyping</h3>
-        <div class="skills">
-          <span class="skill">Autodesk Fusion 360 · advanced</span>
-          <span class="skill">Bottom-up assemblies</span>
-          <span class="skill">Reverse engineering</span>
-          <span class="skill">Motion / fit design</span>
-          <span class="skill">3D modeling</span>
-          <span class="skill">3D printing</span>
-        </div>
-      </div>
-      <div class="card two">
-        <h3>Systems & process improvement</h3>
-        <div class="skills">
-          <span class="skill">Six Sigma Green Belt</span>
-          <span class="skill">Lean Green Belt</span>
-          <span class="skill">DMAIC</span>
-          <span class="skill">Root-cause analysis</span>
-          <span class="skill">Process mapping</span>
-          <span class="skill">Workflow optimization</span>
-          <span class="skill">KPI tracking</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="wrap">
-    <div class="section-label">About</div>
-    <h2>Curious across the technical–business boundary</h2>
-    <div class="grid">
-      <div class="card two">
-        <p>
-          I’m pursuing a B.S. in Systems Engineering & Design at UIUC’s Grainger College of Engineering.
-          I’m drawn to systems where the hard part is not only inventing a technology, but integrating the pieces,
-          improving the process, and scaling it into something that works reliably in the real world.
-        </p>
-      </div>
-      <div class="card two">
-        <div class="timeline">
-          <div class="row"><strong>University of Illinois Urbana-Champaign</strong><span>B.S. Systems Engineering & Design · Expected 2029</span></div>
-          <div class="row"><strong>Academic performance</strong><span>3.9 GPA · Dean’s List · National Merit Scholar</span></div>
-          <div class="row"><strong>Current exploration</strong><span>Autonomy · AI · Space · Advanced Energy · Quantum</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="wrap">
-    <div class="callout">
-      <div class="section-label">Contact</div>
-      <h2 style="margin-bottom:12px">Interested in hard technical problems and fast-learning environments.</h2>
-      <p>
-        I’m looking for opportunities where I can contribute to real engineering work, learn from strong technical teams,
-        and better understand how complex technologies move from design to implementation and scale.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="mailto:emblack2@illinois.edu">Email me</a>
-        <a class="btn btn-secondary" href="./resume.html" target="_blank">View resume</a>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="work"><div class="wrap"><div class="section-label">Selected work</div><h2>Engineering, operations, and communication</h2><div class="grid">
+<article class="card project">
+<div class="project-head"><div><h3>AT-TE Walker Reverse Engineering</h3><div class="tagrow"><span class="tag">Autodesk Fusion 360</span><span class="tag">Reverse Engineering</span><span class="tag">Assembly Integration</span><span class="tag">3D Printing</span><span class="tag">Team of 5</span></div></div><div style="color:var(--muted);white-space:nowrap">SE 101 · Spring 2026</div></div>
+<p>Reverse-engineered a 9-inch articulated walker with a five-person team, rebuilding the physical object as a 34-part CAD assembly with 21 unique modeled components. I owned 24% of the assembly modeling and coordinated linked-file interfaces across contributors as the design moved toward a physical prototype.</p>
+<div class="project-gallery">
+<figure class="shot feature"><img src="./assets/atte-final.jpg" alt="Final CAD reconstruction of the AT-TE reverse-engineering project" loading="lazy"><figcaption>Final team CAD reconstruction — full-system view.</figcaption></figure>
+<figure class="shot"><img src="./assets/atte-source.jpg" alt="Low-angle CAD render of the AT-TE assembly" loading="lazy"><figcaption>Low-angle CAD render showing the underside, leg articulation, and assembly geometry.</figcaption></figure>
+<figure class="shot"><img src="./assets/atte-detail.jpg" alt="Rear three-quarter CAD render of the AT-TE assembly" loading="lazy"><figcaption>Rear three-quarter CAD render showing body geometry, leg interfaces, and articulated joints.</figcaption></figure>
+</div>
+<div class="bullets"><div class="mini"><strong>Problem solving under ambiguity</strong><span>Resolved inaccessible geometry using measurements and visual inference rather than complete source dimensions.</span></div><div class="mini"><strong>Design for fit & motion</strong><span>Modeled body, legs, feet, and connector geometry with mating/alignment features and rotational joints.</span></div><div class="mini"><strong>Systems integration</strong><span>Managed revisions and interfaces across five contributors and helped carry the final system into documentation, animation, and a 3D-printed prototype.</span></div></div>
+</article>
+<article class="card two"><h3>Independent Pet Care Business</h3><div class="tagrow"><span class="tag">Operations</span><span class="tag">Client Management</span><span class="tag">Financial Tracking</span></div><p>Built and operate an independent service business with 20+ repeat clients and $8K+ in revenue. I own scheduling, customer requirements, service delivery, client communication, and financial tracking. The experience has made me comfortable managing overlapping priorities and being accountable for the outcome.</p></article>
+<article class="card two"><h3>Fundraising Pitch Deck · NDA</h3><div class="tagrow"><span class="tag">Technical Communication</span><span class="tag">Investor Messaging</span><span class="tag">PowerPoint</span></div><p>Translated complex technical and company information into a concise investor-facing narrative for a private company pursuing a multi-million-dollar fundraising goal. Created and refined slides, visuals, and messaging used in investor meetings while maintaining confidentiality.</p></article>
+</div></div></section>
+<section id="skills"><div class="wrap"><div class="section-label">Toolbox</div><h2>Technical skills & methods</h2><div class="grid"><div class="card two"><h3>Design & prototyping</h3><div class="skills"><span class="skill">Autodesk Fusion 360 · advanced</span><span class="skill">Bottom-up assemblies</span><span class="skill">Reverse engineering</span><span class="skill">Motion / fit design</span><span class="skill">3D modeling</span><span class="skill">3D printing</span></div></div><div class="card two"><h3>Systems & process improvement</h3><div class="skills"><span class="skill">Six Sigma Green Belt</span><span class="skill">Lean Green Belt</span><span class="skill">DMAIC</span><span class="skill">Root-cause analysis</span><span class="skill">Process mapping</span><span class="skill">Workflow optimization</span><span class="skill">KPI tracking</span></div></div></div></div></section>
+<section id="about"><div class="wrap"><div class="section-label">About</div><h2>Curious across the technical–business boundary</h2><div class="grid"><div class="card two"><p>I’m pursuing a B.S. in Systems Engineering & Design at UIUC’s Grainger College of Engineering. I’m drawn to systems where the hard part is not only inventing a technology, but integrating the pieces, improving the process, and scaling it into something that works reliably in the real world.</p></div><div class="card two"><div class="timeline"><div class="row"><strong>University of Illinois Urbana-Champaign</strong><span>B.S. Systems Engineering & Design · Expected 2029</span></div><div class="row"><strong>Academic performance</strong><span>3.9 GPA · Dean’s List · National Merit Scholar</span></div><div class="row"><strong>Current exploration</strong><span>Autonomy · AI · Space · Advanced Energy · Quantum</span></div></div></div></div></div></section>
+<section id="contact"><div class="wrap"><div class="callout"><div class="section-label">Contact</div><h2 style="margin-bottom:12px">Interested in hard technical problems and fast-learning environments.</h2><p>I’m looking for opportunities where I can contribute to real engineering work, learn from strong technical teams, and better understand how complex technologies move from design to implementation and scale.</p><div class="hero-actions"><a class="btn btn-primary" href="mailto:emblack2@illinois.edu">Email me</a><a class="btn btn-secondary" href="./resume.html" target="_blank">View resume</a></div></div></div></section>
 </main>
-
-<footer>
-  <div class="wrap">Ella Black · Systems Engineering & Design · University of Illinois Urbana-Champaign</div>
-</footer>
+<footer><div class="wrap">Ella Black · Systems Engineering & Design · University of Illinois Urbana-Champaign</div></footer>
 </body>
 </html>
